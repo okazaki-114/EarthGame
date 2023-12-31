@@ -20,7 +20,8 @@ public class Title : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(Fade.Instance.FadeIn());
+        //フェードイン処理
+        StartCoroutine(GameObject.Find("FadeCanvas").GetComponent<Fade>().FadeIn());
         Initialize();
     }
 
@@ -39,7 +40,7 @@ public class Title : MonoBehaviour
     /// </summary>
     public void ChangeMainScene()
     {
-        StartCoroutine(Fade.Instance.FadeOutLoadScene("Main"));
+        StartCoroutine(GameObject.Find("FadeCanvas").GetComponent<Fade>().FadeOutLoadScene("Main"));
     }
 
     /// <summary>

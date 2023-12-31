@@ -6,16 +6,9 @@ using UnityEngine.UI;
 
 public class Fade : MonoBehaviour
 {
-    public static Fade Instance { get; private set; }   //Fade のインスタンス
-
     Image fadePanel;
     readonly float fadeDuration = 1.5f;
     readonly float fadeInDuration = 0.15f;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     private void Start()
     {

@@ -91,7 +91,7 @@ public class GameMain : MonoBehaviour
         AddSeedNumList();                   
 
         //フェードイン処理
-        StartCoroutine(Fade.Instance.FadeIn());
+        StartCoroutine(GameObject.Find("FadeCanvas").GetComponent<Fade>().FadeIn());
 
         //作成する種をセット
         CreateSeed();

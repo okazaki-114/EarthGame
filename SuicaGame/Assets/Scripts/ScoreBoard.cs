@@ -28,7 +28,7 @@ public class ScoreBoard : MonoBehaviour
     /// </summary>
     public void OnTitleScene()
     {
-        StartCoroutine(Fade.Instance.FadeOutLoadScene("Title"));
+        StartCoroutine(GameObject.Find("FadeCanvas").GetComponent<Fade>().FadeOutLoadScene("Title"));
     }
 
     /// <summary>
